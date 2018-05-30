@@ -243,7 +243,7 @@ public class ReportMapFragment extends Fragment implements OnMapReadyCallback, G
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()) {
-                                                        new PopUpDlg(getActivity(), true).show("エラー", "確認用メールを再送しました。", "", "閉じる", new DialogInterface.OnClickListener() {
+                                                        new PopUpDlg(getActivity(), true).show("", "確認用メールを再送しました。", "", "閉じる", new DialogInterface.OnClickListener() {
                                                             @Override
                                                             public void onClick(DialogInterface dialogInterface, int i) {
                                                                 dialogInterface.cancel();
@@ -617,7 +617,7 @@ public class ReportMapFragment extends Fragment implements OnMapReadyCallback, G
                             });
                 }
                 //address
-//                mReportMapBinding.mTextViewAddress.setText(dataSnapshot.child(Constants.PARAM_ADDRESS).getValue().toString());
+                mReportMapBinding.mTextViewAddress.setText(dataSnapshot.child(Constants.PARAM_ADDRESS).getValue().toString());
                 //title
                 mReportMapBinding.mTextViewTitle.setText(dataSnapshot.child(Constants.PARAM_TITLE).getValue().toString());
                 //status
