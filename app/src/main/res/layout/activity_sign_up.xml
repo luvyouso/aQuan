@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="jp.co.asaichi.pubrepo.view.activity.SignUpActivity">
+
+        <include
+            android:id="@+id/mIncludeToolbar"
+            layout="@layout/layout_toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/email_address" />
+
+            <EditText
+                android:id="@+id/mEditTextUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_email_address"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/password" />
+
+            <EditText
+                android:id="@+id/mEditTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/mButtonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height_edit_text"
+                android:layout_marginTop="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/register_border_radius"
+                android:stateListAnimator="@null"
+                android:text="@string/register"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/mTextViewTermOfUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/mRelativeLayoutLoginFB"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height_edit_text"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/chambray_border_rounded_corner"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/chambray_border_rounded_corner"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    android:text="Facebookで登録"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

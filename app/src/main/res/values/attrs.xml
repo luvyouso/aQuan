@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ItemMenu">
+        <attr name="icon_menu" format="reference" />
+        <attr name="title_menu" format="reference" />
+        <attr name="notification" format="reference" />
+        <attr name="isTop" format="boolean" />
+        <attr name="isBottom" format="boolean" />
+    </declare-styleable>
+</resources>

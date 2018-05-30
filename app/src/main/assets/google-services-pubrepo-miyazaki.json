@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1089398940291",
+    "firebase_url": "https://pubrepo-miyazaki.firebaseio.com",
+    "project_id": "pubrepo-miyazaki",
+    "storage_bucket": "pubrepo-miyazaki.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089398940291:android:4a1ec842e60d470c",
+        "android_client_info": {
+          "package_name": "jp.co.comquest.pubrepo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089398940291-792ibe0neufu0imauon2vtk8uma3ouij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMK1H8UgMpPAR604CxQwvyvs_ekbh9ft8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

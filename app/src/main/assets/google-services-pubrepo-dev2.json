@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "753960835168",
+    "firebase_url": "https://pubrepo-dev2.firebaseio.com",
+    "project_id": "pubrepo-dev2",
+    "storage_bucket": "pubrepo-dev2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753960835168:android:4a1ec842e60d470c",
+        "android_client_info": {
+          "package_name": "jp.co.comquest.pubrepo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753960835168-qc3s0u93au1trskup9f1jhr94tpvqel7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6CGAEha9LPJvJf0qrrBhr9UkDWcDzr-M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

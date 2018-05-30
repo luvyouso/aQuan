@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="jp.co.asaichi.pubrepo.view.activity.MainActivity">
+
+        <LinearLayout
+            android:id="@+id/mContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/mLinearLayoutBottom"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mLinearLayoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/tropical_rain_forest"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/mImageViewMapMarker"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_map_marker_copy" />
+
+
+            <ImageView
+                android:id="@+id/mImageViewMenu"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:src="@drawable/icon_menu_copy"
+                android:tint="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

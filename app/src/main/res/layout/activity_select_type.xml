@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="jp.co.asaichi.pubrepo.view.activity.SelectTypeActivity">
+
+        <include
+            android:id="@+id/mIncludeToolbar"
+            layout="@layout/layout_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RadioGroup
+                    android:id="@+id/mRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/mAppCompatCheckBoxTypeRepair"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/icon_type_repair_checkbox"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="建物が壊れている、ヒビが入っている など修繕の必要がある場合" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey" />
+
+                    <RadioButton
+                        android:id="@+id/mAppCompatCheckBoxTypeWithDraw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/icon_type_withdraw_checkbox"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="ゴミや土砂がたまっているなど" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey" />
+
+                    <RadioButton
+                        android:id="@+id/mAppCompatCheckBoxTypePrune"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/icon_type_prune_checkbox"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="草や木で通行が困難な道、視界不良に
+なっている場所など" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey" />
+
+                    <RadioButton
+                        android:id="@+id/mAppCompatCheckBoxTypeOthers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/icon_type_others_checkbox"
+                        android:gravity="left|center"
+                        android:padding="10dp"
+                        android:text="分類がわからない場合や、ご提案など" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/grey" />
+                </RadioGroup>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/toolbar_color</color>
+    <color name="colorPrimaryDark">@color/toolbar_color</color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="colorAccent">@color/blue</color>
+
+    <color name="blue_sky">#00bfff</color>
+    <item name="white" type="color">#FFFFFFFF</item>
+    <item name="black" type="color">#FF000000</item>
+    <item name="grey" type="color">#acaba7</item>
+    <item name="light_grey" type="color">#FFD3D3D3</item>
+    <item name="very_light_grey" type="color">#FFF3F3F3</item>
+    <color name="green">#00ff7f</color>
+    <color name="blue">#00bfff</color>
+    <color name="text_link">#0040ff</color>
+    <color name="text_link_hover">#00bfff</color>
+    <color name="text_link_clicked">#bf00ff</color>
+    <item name="red" type="color">#FFFF0000</item>
+    <item name="red_click" type="color">#c99999</item>
+    <color name="pink">#a7025b</color>
+    <color name="mainly_green">#41B645</color>
+    <color name="light_mainly_green">#FF65A367</color>
+    <color name="light_pink">#dc8168</color>
+    <color name="pinkish">#fce8e8</color>
+    <color name="green_button_tab">#65b38e</color>
+    <color name="green_button_tab_light">#FF78AF95</color>
+    <color name="end_date">#ab6a2e</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="ColorPrimary">#f0eff5</color>
+    <color name="ColorPrimaryDark">#E64A19</color>
+    <color name="ColorBorder">#a5a5a4</color>
+    <color name="ColorText">#3e3e3e</color>
+    <color name="ColorBtnBg">#ffffff</color>
+    <color name="ColorBtnText">#0072bd</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="survey_bg">#c6af92</color>
+    <color name="bg_main">#428bca</color>
+    <color name="bg_gray">#dddddd</color>
+    <color name="txt_red">#db0000</color>
+    <color name="txt_green">#0b75d0</color>
+    <color name="txt_gray">#898989</color>
+    <color name="bg_button_gray">#ebebeb</color>
+    <color name="tb_pink_discount">#ffdada</color>
+    <color name="bg_item_product_touch">#BCE1DF</color>
+    <color name="blue_quotation">#c7e2fc</color>
+    <color name="pink_quotation">#ffe8f7</color>
+    <color name="blue_15">#0d004f</color>
+    <color name="black_light">#767676</color>
+    <color name="blue_seekbar">#14c8fc</color>
+
+    <color name="blue_fb">#3c539a</color>
+    <color name="blue_twitter">#00a9f4</color>
+    <color name="orange">#f37500</color>
+    <color name="transparent_alpha">#e5e5e5</color>
+    <color name="blue_alpha">#69a6e2</color>
+    <color name="grey_alpha">#e2e2e2</color>
+    <color name="rose_white">#FFFAFA</color>
+    <color name="electric_violet">#4700F6</color>
+    <color name="green_haze">#009A76</color>
+    <color name="cerulean">#00A0E6</color>
+    <color name="chambray">#3B5998</color>
+    <color name="yellow">#EFB625</color>
+    <color name="yellow_lemon">#EBEB10</color>
+    <color name="toolbar_color">#009A76</color>
+    <color name="tropical_rain_forest">#006C53</color>
+    <color name="gallery">#F0F0F0</color>
+    <color name="silver">#CCCCCC</color>
+    <color name="red_validate">#C7243A</color>
+    <color name="register">#2db1d7</color>
+    <color name="register_button">#417d6b</color>
+</resources>

@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "756940305187",
+    "firebase_url": "https://pubrepo-dev.firebaseio.com",
+    "project_id": "pubrepo-dev",
+    "storage_bucket": "pubrepo-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756940305187:android:c68a87e680fc5dcc",
+        "android_client_info": {
+          "package_name": "jp.co.asaichi.pubrepo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756940305187-vjibfp3ommoovs65t3n7t9qhpsqcti9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY4S9qRW2GgaUkAtKQeAk4o_pFt3Tz_f8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756940305187:android:4a1ec842e60d470c",
+        "android_client_info": {
+          "package_name": "jp.co.comquest.pubrepo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756940305187-vjibfp3ommoovs65t3n7t9qhpsqcti9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY4S9qRW2GgaUkAtKQeAk4o_pFt3Tz_f8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

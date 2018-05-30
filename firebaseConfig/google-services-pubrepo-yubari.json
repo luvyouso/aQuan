@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "884515515312",
+    "firebase_url": "https://pubrepo-yubari.firebaseio.com",
+    "project_id": "pubrepo-yubari",
+    "storage_bucket": "pubrepo-yubari.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884515515312:android:4a1ec842e60d470c",
+        "android_client_info": {
+          "package_name": "jp.co.comquest.pubrepo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884515515312-76n10bh271icjpj1vvnrestbmrhco6oo.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "884515515312-5si9opqfjqcnlhk79741r3d78sj4s1r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6Nbd56n-SvmcGwf7fp0Jw8OYkdUT4OQA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

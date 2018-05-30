@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="jp.co.asaichi.pubrepo.view.activity.UnsubscribeActivity">
+
+        <include
+            android:id="@+id/mIncludeToolbar"
+            layout="@layout/layout_toolbar" />
+
+        <TextView
+            android:id="@+id/mTextViewUnsubseribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="ユーザー登録情報を削除します。"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/mButtonUnsubscribe"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height_edit_text"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/tropical_rain_forest_border_rounded_corner"
+            android:stateListAnimator="@null"
+            android:text="@string/to_unsubscribe"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</layout>

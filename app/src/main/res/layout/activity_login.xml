@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="jp.co.asaichi.pubrepo.view.activity.LoginActivity">
+
+        <include
+            android:id="@+id/mIncludeToolbar"
+            layout="@layout/layout_toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <EditText
+                android:id="@+id/mEditTextUser"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height_edit_text"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/grey_border"
+                android:hint="@string/user"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/common_text_size" />
+
+            <EditText
+                android:id="@+id/mEditTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height_edit_text"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/grey_border"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/common_text_size" />
+
+            <Button
+                android:id="@+id/mButtonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height_edit_text"
+                android:layout_marginTop="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/cerulear_border_rounded_corner"
+                android:stateListAnimator="@null"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="もしくは" />
+
+            <RelativeLayout
+                android:id="@+id/mRelativeLayoutLoginFB"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_height_edit_text"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/chambray_border_rounded_corner"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/chambray_border_rounded_corner"
+                    android:gravity="center"
+                    android:stateListAnimator="@null"
+                    android:text="Facebookでログイン・登録"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/mTextViewTermOfUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/mTextViewForgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="パスワードを忘れた方はこちら"
+                android:textColor="@color/cerulean" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="初めてご利用の方はこちら"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/mButtonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height_edit_text"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/register_border"
+            android:stateListAnimator="@null"
+            android:text="@string/btn_register_txt"
+            android:textColor="@color/register" />
+    </LinearLayout>
+</layout>

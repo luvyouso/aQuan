@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="@dimen/report_detail_height_width_image"
+        android:layout_height="@dimen/report_detail_height_width_image"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/mImageViewReport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/mImageViewRemove"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_remove_image" />
+    </RelativeLayout>
+</layout>

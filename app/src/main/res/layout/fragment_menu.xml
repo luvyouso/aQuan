@@ -1,0 +1,183 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context="jp.co.asaichi.pubrepo.view.fragment.MenuFragment">
+
+        <include
+            android:id="@+id/mIncludeToolbar"
+            layout="@layout/layout_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_notification"
+                    app:title_menu="@string/report_notification" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_edit_profile"
+                    app:title_menu="@string/edit_profile" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_change_password"
+                    app:title_menu="@string/change_password" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_history"
+                    app:title_menu="@string/report_history" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_menu_new"
+                    app:title_menu="@string/signup" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_question"
+                    app:title_menu="@string/question" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuUserQuide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_user_quide"
+                    app:title_menu="@string/user_guide" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuTermOfService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_term_of_service"
+                    app:title_menu="@string/terms_of_service" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuPrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_menu_privacy"
+                    app:title_menu="@string/privacy_policy" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_note"
+                    app:title_menu="@string/note" />
+
+                <jp.co.asaichi.pubrepo.view.custom.ItemMenu
+                    android:id="@+id/mItemMenuUnsubscribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon_menu="@drawable/icon_unsubscribe"
+                    app:title_menu="@string/unsubscribe" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/bg_gray" />
+
+                <TextView
+                    android:id="@+id/mTextViewLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:foreground="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/logout"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/common_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:foreground="?android:selectableItemBackground"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewGraySwitchArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_gray" />
+
+                <TextView
+                    android:id="@+id/mTextViewSwitchArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:foreground="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:text="自治体を再選択"
+                    android:textColor="@color/toolbar_color"
+                    android:textSize="@dimen/common_text_size" />
+
+                <LinearLayout
+                    android:id="@+id/mLinearLayoutVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_gray" />
+
+                    <TextView
+                        android:id="@+id/mTextViewVersion"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="20dp"
+                        android:foreground="?android:selectableItemBackground"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/common_text_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@color/bg_gray" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

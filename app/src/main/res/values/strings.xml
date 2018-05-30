@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">パブレポ</string>
+
+    <!--<string name="google_maps_key">AIzaSyCP8LLeiHKxSF7cmNgwhd2CrSG96Y2TjVg</string>-->
+    <!--<string name="google_maps_key">AIzaSyBQHrN3dRnALkkAgQV4Tve8j8iC9WYJTXM</string>-->
+    <string name="google_maps_key">AIzaSyAN3PAqUlu4xLRnjthBF859tz66t4taixw</string>
+    <!-- bottom sheet behavior -->
+    <string name="string_bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+
+    <string name="facebook_app_id">167498340521916</string>
+    <string name="fb_login_protocol_scheme">fb167498340521916</string>
+
+    <string name="login">ログイン</string>
+    <string name="user">メールアドレス</string>
+    <string name="password">パスワード</string>
+    <string name="facebook">Facebook でログイン</string>
+    <string name="registration">新規ユーザー登録（無料）はこちら</string>
+    <string name="forgot_password">パスワードの再発行</string>
+    <string name="signup">新規登録</string>
+    <string name="decide">決定する</string>
+    <string name="email_address">メールアドレス</string>
+    <string name="enter_email_address">メールアドレスを入力…</string>
+    <string name="enter_password">パスワードを入力…</string>
+    <string name="cancel">キャンセル</string>
+    <string name="menu">メニュー</string>
+    <string name="report_map">レポートマップ</string>
+    <string name="address_search">住所検索</string>
+    <string name="enter_address">住所を入力</string>
+    <string name="street_address">住所</string>
+    <string name="report_details">レポート詳細</string>
+    <string name="map">マップ</string>
+    <string name="change_type">種別を変更</string>
+    <string name="report_post">レポート投稿</string>
+    <string name="post">投稿する</string>
+    <string name="select_type">種別選択</string>
+    <string name="report_notification">レポート通知</string>
+    <string name="edit_profile">プロフィール編集</string>
+    <string name="change_password">パスワード変更</string>
+    <string name="report_history">レポート履歴</string>
+    <string name="question">よくある質問</string>
+    <string name="user_guide">ご利用ガイド</string>
+    <string name="terms_of_service">利用規約</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="note">お知らせ</string>
+    <string name="unsubscribe">退会</string>
+    <string name="logout">ログアウト</string>
+    <string name="name">投稿者名</string>
+    <string name="info">地域情報</string>
+    <string name="new_password">新しいパスワード</string>
+    <string name="enter_new_password">新しいパスワードを入力…</string>
+    <string name="current_password">現在のパスワード</string>
+    <string name="title_input">タイトル入力</string>
+    <string name="save">保存する</string>
+    <string name="enter_report_title">レポートタイトルを入力… \n</string>
+    <string name="enter_report_title_1">レポートタイトルを入力…</string>
+
+    <string name="enter_report_content">レポート内容を入力… \n\n\n</string>
+    <string name="enter_report_content_1">レポート内容を入力…</string>
+    <string name="content_input">内容入力</string>
+    <string name="post_a_report">レポートを投稿</string>
+
+    <string name="repair">修繕</string>
+    <string name="remove">撤去</string>
+    <string name="pruning">除草・剪定</string>
+    <string name="others">その他</string>
+    <string name="explanation_about_password_reissue">登録済みのメールアドレスを入力して、送信して下さい。\n
+パスワードの再設定メールをお送りします。</string>
+    <string name="send">送信する</string>
+    <string name="password_reissue">パスワード再発行</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="no_geocoder_available">No geocoder available</string>
+
+    <string name="fetch_address">Fetch address</string>
+
+    <string name="address_found">Address found</string>
+
+    <string name="no_address_found">Sorry, no address found</string>
+    <string name="no_location_data_provided">No location data provided</string>
+    <string name="service_not_available">Sorry, the service is not available</string>
+    <string name="invalid_lat_long_used">Invalid latitude or longitude used</string>
+
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+
+    <string name="settings">Settings</string>
+    <string name="please_enter_title">タイトルを入力してください</string>
+    <string name="please_enter_the_content">内容を入力してください</string>
+    <string name="please_select_at_least_one_photo">写真を最低一枚選択してください</string>
+    <string name="to_unsubscribe">退会する</string>
+    <string name="reflect_location_on_map">場所を地図に反映</string>
+    <string name="what_is_pubrepos">パブレポとは？</string>
+    <string name="content_first_page">町の課題を自治体名と共有するためのアプリケーションです。身の周りで見つけた課題や提案を気軽に投稿できて、自治体名の対応状況を確認することができます。レポート投稿や、気になるの利用には新規ユーザー登録（無料）が必要です。</string>
+    <string name="view_all_reports">全てのレポートを見る</string>
+    <string name="btn_register_txt">新規ユーザー登録</string>
+
+    <string name="register">登録する</string>
+</resources>
