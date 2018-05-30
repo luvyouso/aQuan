@@ -24,6 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_report_content_1"
+                android:textColorHint="@color/place_hold_gray"
                 android:textSize="@dimen/common_text_size" />
         </ScrollView>
     </LinearLayout>

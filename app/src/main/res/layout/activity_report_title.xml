@@ -23,6 +23,7 @@
                 android:id="@+id/mEditTextReportTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/place_hold_gray"
                 android:hint="@string/enter_report_title_1"
                 android:textSize="@dimen/common_text_size" />
         </ScrollView>

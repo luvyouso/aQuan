@@ -30,6 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textColor="@color/title_grey"
                     android:text="@string/name" />
 
                 <EditText
@@ -37,17 +38,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="投稿者名を入力…"
+                    android:textColorHint="@color/place_hold_gray"
                     android:maxLines="1"
                     android:singleLine="true" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/text_black"
                     android:text="※レポートに表示され、公開されるニックネームです。" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/title_grey"
                     android:layout_marginTop="20dp"
                     android:text="@string/info" />
 

@@ -25,7 +25,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="30dp"
-                android:text="@string/email_address" />
+                android:text="@string/email_address"
+                android:textColor="@color/title_grey" />
 
             <EditText
                 android:id="@+id/mEditTextUser"
@@ -36,14 +37,16 @@
                 android:lines="1"
                 android:maxLines="1"
                 android:minLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColorHint="@color/place_hold_gray" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="20dp"
-                android:text="@string/password" />
+                android:text="@string/password"
+                android:textColor="@color/title_grey" />
 
             <EditText
                 android:id="@+id/mEditTextPassword"
@@ -54,15 +57,16 @@
                 android:lines="1"
                 android:maxLines="1"
                 android:minLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColorHint="@color/place_hold_gray" />
 
             <Button
                 android:id="@+id/mButtonRegister"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/common_height_edit_text"
                 android:layout_marginTop="10dp"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@drawable/register_border_radius"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:stateListAnimator="@null"
                 android:text="@string/register"
                 android:textColor="@color/white" />
@@ -80,8 +84,8 @@
                 android:layout_height="@dimen/common_height_edit_text"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@drawable/chambray_border_rounded_corner"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center"
                 android:orientation="horizontal">
 

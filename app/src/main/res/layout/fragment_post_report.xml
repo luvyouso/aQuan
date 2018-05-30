@@ -36,7 +36,7 @@
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
                         android:text="種別"
-                        android:textColor="@color/black"
+                        android:textColor="@color/title_grey"
                         android:textStyle="bold" />
 
                     <RelativeLayout
@@ -96,7 +96,7 @@
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
                         android:text="タイトル"
-                        android:textColor="@color/black"
+                        android:textColor="@color/title_grey"
                         android:textStyle="bold"/>
 
                     <EditText
@@ -105,9 +105,11 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:background="@drawable/grey_border"
+                        android:textColor="@color/text_black"
                         android:gravity="top"
                         android:hint="@string/enter_report_title"
                         android:padding="5dp"
+                        android:textColorHint="@color/place_hold_gray"
                         android:textSize="@dimen/common_text_size" />
 
                     <LinearLayout
@@ -144,7 +146,7 @@
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
                         android:text="内容"
-                        android:textColor="@color/black"
+                        android:textColor="@color/title_grey"
                         android:textStyle="bold" />
 
                     <EditText
@@ -154,6 +156,8 @@
                         android:layout_margin="10dp"
                         android:background="@drawable/grey_border"
                         android:gravity="top"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/place_hold_gray"
                         android:hint="@string/enter_report_content"
                         android:padding="5dp"
                         android:textSize="@dimen/common_text_size" />
@@ -192,7 +196,7 @@
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
                         android:text="写真"
-                        android:textColor="@color/black"
+                        android:textColor="@color/title_grey"
                         android:textStyle="bold" />
 
                     <android.support.v7.widget.RecyclerView
@@ -282,7 +286,7 @@
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
                         android:text="場所"
-                        android:textColor="@color/black"
+                        android:textColor="@color/title_grey"
                         android:textStyle="bold" />
 
                     <fragment
@@ -313,7 +317,7 @@
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/text_black"
                         android:layout_marginBottom="20dp"
                         android:text="地図上をタップして、ピンを移動できます。"/>
                 </LinearLayout>

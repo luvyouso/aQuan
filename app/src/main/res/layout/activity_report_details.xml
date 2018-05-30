@@ -49,15 +49,15 @@
                             <ImageView
                                 android:id="@+id/mImageViewStatus"
                                 android:layout_width="35dp"
-                                android:background="@drawable/icon_pin_red"
-                                android:layout_height="40dp" />
+                                android:layout_height="40dp"
+                                android:background="@drawable/icon_pin_red" />
 
                             <TextView
                                 android:id="@+id/mTextViewStatus"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
-                                android:textColor="@color/black" />
+                                android:textColor="@color/title_grey"/>
 
                         </LinearLayout>
 
@@ -99,7 +99,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:text="種別 \n修繕"
-                                android:textColor="@color/black" />
+                                android:textColor="@color/title_grey" />
                         </LinearLayout>
 
                         <View
@@ -130,8 +130,7 @@
                             android:id="@+id/mTextViewLike"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/title_grey" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -152,15 +151,17 @@
                         android:id="@+id/mTextViewDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/common_date_size"
                         android:layout_alignParentLeft="true"
-                        android:text="2017/09/21" />
+                        android:text="2017/09/21"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/common_date_size" />
 
                     <TextView
                         android:id="@+id/mTextViewNameUser"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true" />
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/text_black" />
                 </RelativeLayout>
 
                 <TextView
@@ -171,7 +172,8 @@
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:paddingTop="5dp"
-                    android:textSize="@dimen/common_text_size" />
+                    android:textColor="@color/title_grey"
+                    android:textSize="@dimen/common_title_size" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -182,8 +184,8 @@
                     android:paddingRight="15dp"
                     android:paddingTop="5dp"
                     android:text="内容"
+                    android:textColor="@color/title_grey"
                     android:textSize="@dimen/common_title_size"
-                    android:textColor="@android:color/black"
                     android:textStyle="bold" />
 
                 <TextView
@@ -193,6 +195,7 @@
                     android:lineSpacingExtra="1dp"
                     android:lineSpacingMultiplier="1.2"
                     android:paddingBottom="5dp"
+                    android:textColor="@color/text_black"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:paddingTop="5dp"
@@ -204,12 +207,12 @@
                     android:layout_height="wrap_content"
                     android:background="@color/gallery"
                     android:paddingBottom="5dp"
+                    android:textColor="@color/title_grey"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:paddingTop="5dp"
                     android:text="写真"
                     android:textSize="@dimen/common_title_size"
-                    android:textColor="@android:color/black"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -237,8 +240,8 @@
                     android:paddingRight="15dp"
                     android:paddingTop="5dp"
                     android:text="場所"
+                    android:textColor="@color/title_grey"
                     android:textSize="@dimen/common_title_size"
-                    android:textColor="@android:color/black"
                     android:textStyle="bold" />
 
                 <TextView
@@ -246,10 +249,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="20dp"
-                    android:textSize="@dimen/common_input_size"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:paddingTop="20dp" />
+                    android:textColor="@color/text_black"
+                    android:paddingTop="20dp"
+                    android:textSize="@dimen/common_input_size" />
 
                 <fragment
                     android:id="@+id/mFragmentMap"
@@ -278,6 +282,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/grey_border"
                         android:hint="Comment"
+                        android:textColorHint="@color/place_hold_gray"
                         android:inputType="textMultiLine"
                         android:lines="8"
                         android:maxLines="8"

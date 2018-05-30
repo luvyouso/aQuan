@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 
@@ -103,8 +105,9 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                 break;
                             }
                             //status
+                            String status = "";
                             if (Integer.parseInt(dataSnapshot.child(Constants.PARAM_STATUS).getValue().toString()) == 2) {
-                                mReportDetailsBinding.mTextViewStatus.setText(Constants.STATUS + Constants.STATUS_2_WAITING);
+                                status = Constants.STATUS_2_WAITING;
                                 Glide.with(MyAplication.getInstance())
                                         .load(R.drawable.icon_pin_red)
                                         .apply(RequestOptions
@@ -113,7 +116,7 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                         .into(mReportDetailsBinding.mImageViewStatus);
 
                             } else if (Integer.parseInt(dataSnapshot.child(Constants.PARAM_STATUS).getValue().toString()) == 3) {
-                                mReportDetailsBinding.mTextViewStatus.setText(Constants.STATUS + Constants.STATUS_3_DURING);
+                                status = Constants.STATUS_3_DURING;
                                 Glide.with(MyAplication.getInstance())
                                         .load(R.drawable.icon_pin_yellow)
                                         .apply(RequestOptions
@@ -122,7 +125,7 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                         .into(mReportDetailsBinding.mImageViewStatus);
 
                             } else if (Integer.parseInt(dataSnapshot.child(Constants.PARAM_STATUS).getValue().toString()) == 4) {
-                                mReportDetailsBinding.mTextViewStatus.setText(Constants.STATUS + Constants.STATUS_4_CORRESPONDING);
+                                status = Constants.STATUS_4_CORRESPONDING;
                                 Glide.with(MyAplication.getInstance())
                                         .load(R.drawable.icon_pin_green)
                                         .apply(RequestOptions
@@ -130,7 +133,7 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                                 .error(R.drawable.icon_error))
                                         .into(mReportDetailsBinding.mImageViewStatus);
                             } else {
-                                mReportDetailsBinding.mTextViewStatus.setText(Constants.STATUS + Constants.STATUS_1_UNRECOGNIZED);
+                                status = Constants.STATUS_1_UNRECOGNIZED;
                                 Glide.with(MyAplication.getInstance())
                                         .load(R.drawable.icon_pin_gray)
                                         .apply(RequestOptions
@@ -138,8 +141,15 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                                 .error(R.drawable.icon_error))
                                         .into(mReportDetailsBinding.mImageViewStatus);
                             }
+
+                            String convertStatus = Constants.STATUS + status;
+                            SpannableString ssStatus = new SpannableString(convertStatus);
+                            ssStatus.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getApplicationContext(), R.color.text_gray)), 0, 2, 0);
+                            mReportDetailsBinding.mTextViewStatus.setText(ssStatus);
+
                             //type
                             int type = Integer.parseInt(dataSnapshot.child(Constants.PARAM_TYPE).getValue().toString());
+                            CharSequence statusType = "";
                             switch (type) {
                                 case 1:
                                     Glide.with(MyAplication.getInstance())
@@ -148,7 +158,7 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                                     .centerInsideTransform()
                                                     .error(R.drawable.icon_error))
                                             .into(mReportDetailsBinding.mImageViewType);
-                                    mReportDetailsBinding.mTextViewType.setText(Constants.STATUS_TYPE + getText(R.string.repair));
+                                    statusType = getText(R.string.repair);
                                     break;
                                 case 2:
                                     Glide.with(MyAplication.getInstance())
@@ -157,7 +167,7 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                                     .centerInsideTransform()
                                                     .error(R.drawable.icon_error))
                                             .into(mReportDetailsBinding.mImageViewType);
-                                    mReportDetailsBinding.mTextViewType.setText(Constants.STATUS_TYPE + getText(R.string.remove));
+                                    statusType = getText(R.string.remove);
                                     break;
                                 case 3:
                                     Glide.with(MyAplication.getInstance())
@@ -166,7 +176,7 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                                     .centerInsideTransform()
                                                     .error(R.drawable.icon_error))
                                             .into(mReportDetailsBinding.mImageViewType);
-                                    mReportDetailsBinding.mTextViewType.setText(Constants.STATUS_TYPE + getText(R.string.pruning));
+                                    statusType = getText(R.string.pruning);
                                     break;
                                 case 4:
                                     Glide.with(MyAplication.getInstance())
@@ -175,11 +185,16 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                                     .centerInsideTransform()
                                                     .error(R.drawable.icon_error))
                                             .into(mReportDetailsBinding.mImageViewType);
-                                    mReportDetailsBinding.mTextViewType.setText(Constants.STATUS_TYPE + getText(R.string.others));
+                                    statusType = getText(R.string.others);
                                     break;
                                 default:
                                     break;
                             }
+                            String convertStatusType = Constants.STATUS_TYPE + statusType;
+                            SpannableString ssType = new SpannableString(convertStatusType);
+                            ssType.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getApplicationContext(), R.color.text_gray)), 0, 2, 0);
+                            mReportDetailsBinding.mTextViewType.setText(ssType);
+
 //                            Long status = (Long) dataSnapshot.child(Constants.PARAM_STATUS).getValue();
 //                            if (status == 2) {
 //                                mReportDetailsBinding.mImageViewType.setColorFilter(ContextCompat.getColor(ReportDetailsActivity.this, R.color.red_validate));
@@ -190,11 +205,11 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
 //                            }
 
                             //like
+                            int countLike = 0;
                             if (dataSnapshot.child(Constants.PARAM_LIKES).getValue() == null) {
-                                mReportDetailsBinding.mTextViewLike.setText("気になる!\n" + "0");
+                                countLike = 0;
                             } else {
                                 HashMap<String, Boolean> likes = (HashMap<String, Boolean>) dataSnapshot.child(Constants.PARAM_LIKES).getValue();
-                                int countLike = 0;
                                 for (String key : likes.keySet()) {
                                     if (likes.get(key)) {
                                         countLike++;
@@ -205,25 +220,34 @@ public class ReportDetailsActivity extends BaseActivity implements OnMapReadyCal
                                     mReportDetailsBinding.mTextViewLike.setTypeface(null, Typeface.BOLD);
                                     mReportDetailsBinding.mTextViewLike.setTextColor(ContextCompat.getColor(ReportDetailsActivity.this, R.color.orange));
                                 }
-                                mReportDetailsBinding.mTextViewLike.setText("気になる!\n" + countLike + "");
                             }
+                            String contentLike = "気になる!\n" + countLike;
+                            SpannableString ss = new SpannableString(contentLike);
+                            ss.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getApplicationContext(), R.color.text_gray)), 0, 5, 0);
+                            mReportDetailsBinding.mTextViewLike.setText(ss);
 
                             //date
                             mReportDetailsBinding.mTextViewDate.setText(Utils.dateFromMillisecond(Constants.DEFAULT_DATE_FORMAT, (Long) dataSnapshot.child(Constants.PARAM_CREATED_TIMESTAMP).getValue()));
                             //user name
                             HashMap<String, Object> userHashMap = (HashMap<String, Object>) dataSnapshot.child(Constants.PARAM_CREATED_USER).getValue();
                             for (String key : userHashMap.keySet()) {
-                                mFirebaseUtils.getFirebaseDatabase().getReference(Constants.PARAM_USER).child(key).addValueEventListener(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(DataSnapshot dataSnapshots) {
-                                        mReportDetailsBinding.mTextViewNameUser.setText(dataSnapshots.child(Constants.PARAM_NAME).getValue() == null ? "" : dataSnapshots.child(Constants.PARAM_NAME).getValue().toString());
-                                    }
+                                mFirebaseUtils.getFirebaseDatabase()
+                                        .getReference(Constants.PARAM_USER)
+                                        .child(key)
+                                        .child(Constants.PARAM_NAME)
+                                        .addListenerForSingleValueEvent(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(DataSnapshot dataSnapshots) {
+                                                mReportDetailsBinding.mTextViewNameUser.setText(
+                                                        dataSnapshots == null || dataSnapshots.getValue() == null ? "" :
+                                                                dataSnapshots.getValue().toString());
+                                            }
 
-                                    @Override
-                                    public void onCancelled(DatabaseError databaseError) {
+                                            @Override
+                                            public void onCancelled(DatabaseError databaseError) {
 
-                                    }
-                                });
+                                            }
+                                        });
                             }
                             //title
                             mReportDetailsBinding.mTextViewTitle.setText(dataSnapshot.child(Constants.PARAM_TITLE).getValue() == null ? "" : dataSnapshot.child(Constants.PARAM_TITLE).getValue().toString());

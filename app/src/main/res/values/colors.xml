@@ -75,4 +75,9 @@
     <color name="register">#2db1d7</color>
     <color name="register_button">#417d6b</color>
     <color name="background_splash">#006c54</color>
+
+    <color name="title_grey">#303030</color>
+    <color name="place_hold_gray">#dddddd</color>
+    <color name="text_black">#606060</color>
+    <color name="text_gray">#b3b3b3</color>
 </resources>

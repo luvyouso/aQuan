@@ -34,6 +34,7 @@
                 android:minLines="1"
                 android:paddingLeft="5dp"
                 android:singleLine="true"
+                android:textColorHint="@color/place_hold_gray"
                 android:textSize="@dimen/common_text_size" />
 
             <EditText
@@ -49,6 +50,7 @@
                 android:minLines="1"
                 android:paddingLeft="5dp"
                 android:singleLine="true"
+                android:textColorHint="@color/place_hold_gray"
                 android:textSize="@dimen/common_text_size" />
 
             <Button
@@ -56,8 +58,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/common_height_edit_text"
                 android:layout_marginTop="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@drawable/cerulear_border_rounded_corner"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:stateListAnimator="@null"
                 android:text="@string/login"
                 android:textAllCaps="false"
@@ -77,8 +79,8 @@
                 android:layout_height="@dimen/common_height_edit_text"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:background="@drawable/chambray_border_rounded_corner"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -119,24 +121,24 @@
             android:background="@color/grey" />
 
         <TextView
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:text="初めてご利用の方はこちら"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/mButtonRegister"
             android:layout_width="match_parent"
             android:layout_height="@dimen/common_height_edit_text"
-            android:foreground="?android:attr/selectableItemBackground"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/register_border"
+            android:foreground="?android:attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="@string/btn_register_txt"
             android:textColor="@color/register" />
