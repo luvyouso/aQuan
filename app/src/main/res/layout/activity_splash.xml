@@ -3,11 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/icon_splash"
-        tools:context="jp.co.asaichi.pubrepo.view.activity.SplashActivity">
+        android:background="@color/background_splash">
 
-    </ImageView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-88dp"
+            android:layout_marginRight="-85dp"
+            android:layout_marginTop="-60dp"
+            android:background="@drawable/icon_launch_screen"
+            tools:context="jp.co.asaichi.pubrepo.view.activity.SplashActivity">
+
+        </ImageView>
+    </LinearLayout>
+
 </layout>

@@ -74,4 +74,5 @@
     <color name="red_validate">#C7243A</color>
     <color name="register">#2db1d7</color>
     <color name="register_button">#417d6b</color>
+    <color name="background_splash">#006c54</color>
 </resources>
