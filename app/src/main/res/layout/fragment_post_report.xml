@@ -32,6 +32,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/gallery"
+                        android:textSize="@dimen/common_title_size"
                         android:paddingLeft="10dp"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
@@ -59,8 +60,8 @@
 
                             <ImageView
                                 android:id="@+id/mImageViewReportType"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp" />
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" />
 
                             <TextView
                                 android:id="@+id/mTextViewReportType"
@@ -68,7 +69,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:textColor="@color/black"
-                                android:textSize="25sp" />
+                                android:textSize="@dimen/common_input_size" />
                         </LinearLayout>
 
                         <Button
@@ -93,6 +94,7 @@
                         android:background="@color/gallery"
                         android:paddingLeft="10dp"
                         android:paddingTop="5dp"
+                        android:textSize="@dimen/common_title_size"
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
                         android:text="タイトル"
@@ -110,7 +112,7 @@
                         android:hint="@string/enter_report_title"
                         android:padding="5dp"
                         android:textColorHint="@color/place_hold_gray"
-                        android:textSize="@dimen/common_text_size" />
+                        android:textSize="@dimen/common_input_size" />
 
                     <LinearLayout
                         android:id="@+id/mLinearLayoutErrorTitle"
@@ -146,6 +148,7 @@
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
                         android:text="内容"
+                        android:textSize="@dimen/common_title_size"
                         android:textColor="@color/title_grey"
                         android:textStyle="bold" />
 
@@ -160,7 +163,7 @@
                         android:textColorHint="@color/place_hold_gray"
                         android:hint="@string/enter_report_content"
                         android:padding="5dp"
-                        android:textSize="@dimen/common_text_size" />
+                        android:textSize="@dimen/common_input_size" />
 
                     <LinearLayout
                         android:id="@+id/mLinearLayoutErrorContent"
@@ -194,6 +197,7 @@
                         android:paddingLeft="10dp"
                         android:paddingTop="5dp"
                         android:paddingRight="10dp"
+                        android:textSize="@dimen/common_title_size"
                         android:paddingBottom="5dp"
                         android:text="写真"
                         android:textColor="@color/title_grey"
@@ -286,6 +290,7 @@
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
                         android:text="場所"
+                        android:textSize="@dimen/common_title_size"
                         android:textColor="@color/title_grey"
                         android:textStyle="bold" />
 

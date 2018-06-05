@@ -24,76 +24,119 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <RadioGroup
-                    android:id="@+id/mRadioGroup"
+                <LinearLayout
+                    android:id="@+id/mLinearLayoutTypeRepair"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/mAppCompatCheckBoxTypeRepair"
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/mImageViewTypeRepair"
+                        android:layout_width="@dimen/report_type_height_width"
+                        android:layout_height="@dimen/report_type_height_width"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:button="@drawable/icon_type_repair_checkbox"
-                        android:gravity="left|center"
                         android:padding="10dp"
-                        android:text="建物が壊れている、ヒビが入っている など修繕の必要がある場合" />
+                        android:text="建物が壊れている、ヒビが入っている など修繕の必要がある場合"
+                        android:textColor="@color/text_black" />
+                </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/grey" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
 
-                    <RadioButton
-                        android:id="@+id/mAppCompatCheckBoxTypeWithDraw"
-                        android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/mLinearLayoutTypeWithDraw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mImageViewTypeWithDraw"
+                        android:layout_width="@dimen/report_type_height_width"
+                        android:layout_height="@dimen/report_type_height_width"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:button="@drawable/icon_type_withdraw_checkbox"
-                        android:gravity="left|center"
                         android:padding="10dp"
-                        android:text="ゴミや土砂がたまっているなど" />
+                        android:text="ゴミや土砂がたまっているなど"
+                        android:textColor="@color/text_black" />
+                </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/grey" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
 
-                    <RadioButton
-                        android:id="@+id/mAppCompatCheckBoxTypePrune"
-                        android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/mLinearLayoutTypePrune"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mImageViewTypePrune"
+                        android:layout_width="@dimen/report_type_height_width"
+                        android:layout_height="@dimen/report_type_height_width"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:button="@drawable/icon_type_prune_checkbox"
-                        android:gravity="left|center"
                         android:padding="10dp"
                         android:text="草や木で通行が困難な道、視界不良に
-なっている場所など" />
+なっている場所など"
+                        android:textColor="@color/text_black" />
+                </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/grey" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
 
-                    <RadioButton
-                        android:id="@+id/mAppCompatCheckBoxTypeOthers"
-                        android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/mLinearLayoutTypeOthers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/mImageViewTypeOthers"
+                        android:layout_width="@dimen/report_type_height_width"
+                        android:layout_height="@dimen/report_type_height_width"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:button="@drawable/icon_type_others_checkbox"
-                        android:gravity="left|center"
                         android:padding="10dp"
-                        android:text="分類がわからない場合や、ご提案など" />
+                        android:text="分類がわからない場合や、ご提案など"
+                        android:textColor="@color/text_black" />
+                </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/grey" />
-                </RadioGroup>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
+
             </LinearLayout>
 
         </ScrollView>

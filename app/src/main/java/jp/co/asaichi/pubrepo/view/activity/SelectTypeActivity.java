@@ -6,8 +6,10 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import jp.co.asaichi.pubrepo.R;
 import jp.co.asaichi.pubrepo.common.Constants;
@@ -16,6 +18,7 @@ import jp.co.asaichi.pubrepo.utils.Utils;
 
 public class SelectTypeActivity extends BaseActivity {
     private ActivitySelectTypeBinding mSelectTypeBinding;
+    private int mPositionCheck = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,48 +39,77 @@ public class SelectTypeActivity extends BaseActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             int type = bundle.getInt(Constants.EXTRA_REPORT_TYPE);
+            clearImage();
             switch (type) {
                 case 1:
-                    mSelectTypeBinding.mAppCompatCheckBoxTypeRepair.setChecked(true);
+                    setImage(mSelectTypeBinding.mImageViewTypeRepair, R.drawable.type_repair_big_active);
                     break;
                 case 2:
-                    mSelectTypeBinding.mAppCompatCheckBoxTypeWithDraw.setChecked(true);
+                    setImage(mSelectTypeBinding.mImageViewTypeWithDraw, R.drawable.type_withdraw_big_active);
                     break;
                 case 3:
-                    mSelectTypeBinding.mAppCompatCheckBoxTypePrune.setChecked(true);
+                    setImage(mSelectTypeBinding.mImageViewTypePrune, R.drawable.type_prune_big_active);
                     break;
                 case 4:
-                    mSelectTypeBinding.mAppCompatCheckBoxTypeOthers.setChecked(true);
+                    setImage(mSelectTypeBinding.mImageViewTypeOthers, R.drawable.type_others_big_active);
                     break;
                 default:
                     break;
             }
         }
+
         mSelectTypeBinding.mIncludeToolbar.mLinearLayoutBack.setOnClickListener(v -> {
             Utils.hideSoftKeyboard(this);
             finish();
         });
 
+        mSelectTypeBinding.mLinearLayoutTypeRepair.setOnClickListener(v -> {
+            clearImage();
+            setImage(mSelectTypeBinding.mImageViewTypeRepair, R.drawable.type_repair_big_active);
+            mPositionCheck = 1;
+        });
+
+        mSelectTypeBinding.mLinearLayoutTypeWithDraw.setOnClickListener(v -> {
+            clearImage();
+            setImage(mSelectTypeBinding.mImageViewTypeWithDraw, R.drawable.type_withdraw_big_active);
+            mPositionCheck = 2;
+        });
+
+        mSelectTypeBinding.mLinearLayoutTypePrune.setOnClickListener(v -> {
+            clearImage();
+            setImage(mSelectTypeBinding.mImageViewTypePrune, R.drawable.type_prune_big_active);
+            mPositionCheck = 3;
+        });
+
+        mSelectTypeBinding.mLinearLayoutTypeOthers.setOnClickListener(v -> {
+            clearImage();
+            setImage(mSelectTypeBinding.mImageViewTypeOthers, R.drawable.type_others_big_active);
+            mPositionCheck = 4;
+        });
+
         mSelectTypeBinding.mIncludeToolbar.mTextViewRight.setOnClickListener(v -> {
-            int positionCheck = 0;
-            if (mSelectTypeBinding.mAppCompatCheckBoxTypeRepair.isChecked()) {
-                positionCheck = 1;
-            }
-            if (mSelectTypeBinding.mAppCompatCheckBoxTypeWithDraw.isChecked()) {
-                positionCheck = 2;
-            }
-            if (mSelectTypeBinding.mAppCompatCheckBoxTypePrune.isChecked()) {
-                positionCheck = 3;
-            }
-            if (mSelectTypeBinding.mAppCompatCheckBoxTypeOthers.isChecked()) {
-                positionCheck = 4;
-            }
             Utils.hideSoftKeyboard(this);
             Intent returnIntent = new Intent();
-            returnIntent.putExtra(Constants.EXTRA_REPORT_TYPE, positionCheck);
+            returnIntent.putExtra(Constants.EXTRA_REPORT_TYPE, mPositionCheck);
             setResult(Activity.RESULT_OK, returnIntent);
             finish();
         });
 
+    }
+
+    private void clearImage() {
+        setImage(mSelectTypeBinding.mImageViewTypeRepair, R.drawable.type_repair_big);
+        setImage(mSelectTypeBinding.mImageViewTypeWithDraw, R.drawable.type_withdraw_big);
+        setImage(mSelectTypeBinding.mImageViewTypePrune, R.drawable.type_prune_big);
+        setImage(mSelectTypeBinding.mImageViewTypeOthers, R.drawable.type_others_big);
+    }
+
+    private void setImage(ImageView imageView, int drawable) {
+        Glide.with(getApplicationContext())
+                .load(drawable)
+                .apply(RequestOptions
+                        .centerCropTransform()
+                        .error(R.drawable.icon_error))
+                .into(imageView);
     }
 }

@@ -13,6 +13,7 @@
 
     <!--report detail-->
     <dimen name="report_detail_height_width_image">150dp</dimen>
+    <dimen name="report_type_height_width">100dp</dimen>
 
 
 </resources>
