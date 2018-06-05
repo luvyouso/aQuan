@@ -169,10 +169,10 @@
                     android:id="@+id/mTextViewTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="16dp"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:paddingTop="5dp"
+                    android:paddingTop="16dp"
                     android:textColor="@color/title_grey"
                     android:textSize="@dimen/common_title_size" />
 
@@ -195,11 +195,11 @@
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="1dp"
                     android:lineSpacingMultiplier="1.2"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="16dp"
                     android:textColor="@color/text_black"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:paddingTop="5dp"
+                    android:paddingTop="16dp"
                     android:textSize="@dimen/common_input_size"/>
 
                 <TextView
@@ -268,6 +268,8 @@
                     android:layout_marginTop="5dp"
                     android:background="@color/gallery"
                     android:padding="5dp"
+                    android:textColor="@color/title_grey"
+                    android:textSize="@dimen/common_title_size"
                     android:text="コメント" />
 
                 <RelativeLayout

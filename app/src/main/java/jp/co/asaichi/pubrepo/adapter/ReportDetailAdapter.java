@@ -59,7 +59,7 @@ public class ReportDetailAdapter extends AbstractAdapter {
                     .load(mListData.get(position))
                     .apply(RequestOptions
                             .centerCropTransform()
-                            .error(R.mipmap.ic_launcher))
+                            .error(R.drawable.icon_error))
                     .into(viewHolder.getReportDetailBinding().mImageViewReport);
             viewHolder.getReportDetailBinding().mImageViewReport.setOnClickListener(v -> {
                 if (mItemInteractionListener != null) {
