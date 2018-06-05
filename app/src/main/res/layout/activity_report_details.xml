@@ -57,7 +57,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
-                                android:textColor="@color/title_grey"/>
+                                android:textColor="@color/title_grey" />
 
                         </LinearLayout>
 
@@ -128,9 +128,9 @@
 
                         <TextView
                             android:id="@+id/mTextViewLike"
-                            android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
                             android:textColor="@color/title_grey" />
                     </LinearLayout>
                 </LinearLayout>
@@ -196,22 +196,22 @@
                     android:lineSpacingExtra="1dp"
                     android:lineSpacingMultiplier="1.2"
                     android:paddingBottom="16dp"
-                    android:textColor="@color/text_black"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:paddingTop="16dp"
-                    android:textSize="@dimen/common_input_size"/>
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/common_input_size" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/gallery"
                     android:paddingBottom="5dp"
-                    android:textColor="@color/title_grey"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:paddingTop="5dp"
                     android:text="写真"
+                    android:textColor="@color/title_grey"
                     android:textSize="@dimen/common_title_size"
                     android:textStyle="bold" />
 
@@ -251,15 +251,17 @@
                     android:paddingBottom="20dp"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textColor="@color/text_black"
                     android:paddingTop="20dp"
-                    android:textSize="@dimen/common_input_size" />
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/common_input_size"
+                    android:visibility="gone" />
 
                 <fragment
                     android:id="@+id/mFragmentMap"
                     class="jp.co.asaichi.pubrepo.view.custom.WorkaroundMapFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp" />
+                    android:layout_height="200dp"
+                    android:layout_marginTop="25dp" />
 
                 <TextView
                     android:id="@+id/mTextViewLabelComment"
@@ -268,9 +270,9 @@
                     android:layout_marginTop="5dp"
                     android:background="@color/gallery"
                     android:padding="5dp"
+                    android:text="コメント"
                     android:textColor="@color/title_grey"
-                    android:textSize="@dimen/common_title_size"
-                    android:text="コメント" />
+                    android:textSize="@dimen/common_title_size" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -284,13 +286,13 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/grey_border"
                         android:hint="Comment"
-                        android:textColorHint="@color/place_hold_gray"
                         android:inputType="textMultiLine"
                         android:lines="8"
                         android:maxLines="8"
                         android:minLines="2"
                         android:paddingLeft="5dp"
                         android:paddingRight="20dp"
+                        android:textColorHint="@color/place_hold_gray"
                         android:textSize="@dimen/common_text_size" />
 
                     <ImageView
