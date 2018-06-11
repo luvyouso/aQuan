@@ -361,7 +361,7 @@ public class ReportPostFragment extends Fragment implements OnMapReadyCallback,
         });
 
         mPostReportBinding.mButtonReflectLocationMap.setOnClickListener(v -> {
-                getAddress();
+            getAddress();
         });
 
         //edit
@@ -379,6 +379,8 @@ public class ReportPostFragment extends Fragment implements OnMapReadyCallback,
                 Intent intent = new Intent(getActivity(), WebActivity.class);
                 intent.putExtra(Constants.EXTRA_TYPE_WEB, googleService.getGuidUrl());
                 intent.putExtra(Constants.EXTRA_REPORT_TITILE, getText(R.string.user_guide));
+                intent.putExtra(Constants.EXTRA_REPORT_IS_POST, true);
+
                 startActivity(intent);
             }
 

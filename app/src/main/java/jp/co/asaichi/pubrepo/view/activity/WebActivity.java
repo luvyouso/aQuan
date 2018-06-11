@@ -54,15 +54,6 @@ public class WebActivity extends BaseActivity {
                 mWebBinding.mProgressBar.setVisibility(View.GONE);
             }
         });
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
-            String url = bundle.getString(Constants.EXTRA_TYPE_WEB);
-            String title = bundle.getString(Constants.EXTRA_REPORT_TITILE);
-            mWebBinding.mIncludeToolbar.mTextViewTitle.setText(title);
-            mWebBinding.mIncludeToolbar.mTextViewTitle.setTextColor(ContextCompat.getColor(this, R.color.white));
-            mWebBinding.mWebViewContent.loadUrl(url);
-        }
-
         Glide.with(this)
                 .load(R.drawable.icon_back)
                 .into(mWebBinding.mIncludeToolbar.mImageViewBack);
@@ -72,5 +63,18 @@ public class WebActivity extends BaseActivity {
             finish();
         });
 
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            String url = bundle.getString(Constants.EXTRA_TYPE_WEB);
+            String title = bundle.getString(Constants.EXTRA_REPORT_TITILE);
+            boolean isPost = bundle.getBoolean(Constants.EXTRA_REPORT_IS_POST, false);
+            if(isPost){
+                mWebBinding.mIncludeToolbar.mTextViewBack.setText(R.string.cancel);
+            }
+            mWebBinding.mIncludeToolbar.mTextViewTitle.setText(title);
+            mWebBinding.mIncludeToolbar.mTextViewTitle.setTextColor(ContextCompat.getColor(this, R.color.white));
+            mWebBinding.mWebViewContent.loadUrl(url);
+
+        }
     }
 }

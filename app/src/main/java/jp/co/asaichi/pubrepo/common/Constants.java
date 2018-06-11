@@ -43,6 +43,7 @@ public class Constants {
     public static final String EXTRA_REPORT_EDIT = "pubrepo_extra_report_edit";
     public static final String EXTRA_REPORT_IMAGES = "pubrepo_extra_report_image";
     public static final String EXTRA_REPORT_POSITION = "pubrepo_extra_report_position";
+    public static final String EXTRA_REPORT_IS_POST = "extra_report_is_post";
 
     //API
     public static final String API_CONFIG = "config/pubrepo.json";
