@@ -4,10 +4,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 import jp.co.asaichi.pubrepo.R;
 import jp.co.asaichi.pubrepo.common.Constants;
@@ -60,18 +64,28 @@ public class UnsubscribeActivity extends BaseActivity {
                             }
                         });
             } else {
-                //mFirebaseUtils.getUser().delete();
-                mFirebaseUtils.getFirebaseDatabase() //update status 0 is login not login
-                        .getReference(Constants.PARAM_USER)
-                        .child(mFirebaseUtils.getUser().getUid())
-                        .child(Constants.PARAM_STATUS)
-                        .setValue(0)
-                        .addOnCompleteListener(voi -> {
+                mFirebaseUtils.getUser().delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
                             mFirebaseUtils.logout();
                             Intent intent = new Intent(UnsubscribeActivity.this, MainActivity.class);
                             startActivity(intent);
                             finishAffinity();
-                        });
+//                            mFirebaseUtils.getFirebaseDatabase() //update status 0 is login not login
+//                                    .getReference(Constants.PARAM_USER)
+//                                    .child(mFirebaseUtils.getUser().getUid())
+//                                    .child(Constants.PARAM_STATUS)
+//                                    .setValue(0)
+//                                    .addOnCompleteListener(voi -> {
+//                                        mFirebaseUtils.logout();
+//                                        Intent intent = new Intent(UnsubscribeActivity.this, MainActivity.class);
+//                                        startActivity(intent);
+//                                        finishAffinity();
+//                                    });
+                        }
+                    }
+                });
             }
         });
     }
