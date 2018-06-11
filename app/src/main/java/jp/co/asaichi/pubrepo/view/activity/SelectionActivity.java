@@ -42,11 +42,6 @@ public class SelectionActivity extends BaseActivity implements AbstractAdapter.L
     private ArrayList<GoogleService> mDatas;
     private ReportSelectAdapter mSelectAdapter;
 
-    private String appId;
-    private String apiKey;
-    private String databaseUrl;
-    private String storageBucket;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,8 +122,9 @@ public class SelectionActivity extends BaseActivity implements AbstractAdapter.L
                                     mLocalData.saveData(Constants.SHARED_PREFERENCES_SERVER, new Gson().toJson(item));
                                     String switchAera = mLocalData.getData(Constants.SHARED_PREFERENCES_SWITCH_AERA);
                                     String message = TextUtils.isEmpty(switchAera) ? "この自治体でよろしいですか？" : "自治体を変更するにはアプリケーションを落とす必要があります。アプリケーションを終了してよろしいですか？";
+                                    String negativeButton = TextUtils.isEmpty(switchAera) ? "再選択" : "キャンセル";
                                     PopUpDlg popUpDlg = new PopUpDlg(SelectionActivity.this, true);
-                                    popUpDlg.show(item.getName(), message, "はい", "再選択", (dialogInterface, x) -> {
+                                    popUpDlg.show(item.getName(), message, "はい", negativeButton, (dialogInterface, x) -> {
                                         FirebaseApp.getApps(MyAplication.getInstance()).clear();
                                         mFirebaseUtils.connectFirebase(item);
                                         if (TextUtils.isEmpty(switchAera)) {
