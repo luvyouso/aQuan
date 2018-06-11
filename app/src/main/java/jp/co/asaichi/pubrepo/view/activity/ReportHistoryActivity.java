@@ -82,8 +82,22 @@ public class ReportHistoryActivity extends BaseActivity implements AbstractAdapt
     @Override
     public void onInteraction(ViewDataBinding viewDataBinding, View view, Object model, int position) {
         DataSnapshot dataSnapshot = (DataSnapshot) model;
-        Intent intent = new Intent(ReportHistoryActivity.this, ReportPostActivity.class);
-        intent.putExtra(Constants.EXTRA_REPORT_EDIT, dataSnapshot.getKey());
-        startActivity(intent);
+        Long active = dataSnapshot.child(Constants.PARAM_ACTIVE).getValue() == null ? 0 : (Long) dataSnapshot.child(Constants.PARAM_ACTIVE).getValue();
+        Long status = (Long) dataSnapshot.child(Constants.PARAM_STATUS).getValue();
+        if (active == 1) {
+            if (status == 1 || status == 0) {
+                Intent intent = new Intent(ReportHistoryActivity.this, ReportPostActivity.class);
+                intent.putExtra(Constants.EXTRA_REPORT_EDIT, dataSnapshot.getKey());
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(ReportHistoryActivity.this, ReportDetailsActivity.class);
+                intent.putExtra(Constants.EXTRA_REPORT_DETAIL, dataSnapshot.getKey());
+                startActivity(intent);
+            }
+        } else {
+            Intent intent = new Intent(ReportHistoryActivity.this, ReportPostActivity.class);
+            intent.putExtra(Constants.EXTRA_REPORT_EDIT, dataSnapshot.getKey());
+            startActivity(intent);
+        }
     }
 }

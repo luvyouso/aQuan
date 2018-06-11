@@ -64,18 +64,18 @@ public class FirebaseUtils {
      * @param googleService
      */
     public void connectFirebase(GoogleService googleService) {
-//        FirebaseOptions options = new FirebaseOptions.Builder()
-//                .setApplicationId(googleService.getApplicationId()) // Required for Analytics.
-//                .setApiKey(googleService.getApiKey()) // Required for Auth.
-//                .setDatabaseUrl(googleService.getDatabaseUrl()) // Required for RTDB.
-//                .setStorageBucket(googleService.getStorageBucket())
-//                .build();
         FirebaseOptions options = new FirebaseOptions.Builder()
-                .setApplicationId("1:756940305187:android:c68a87e680fc5dcc") // Required for Analytics.
-                .setApiKey("AIzaSyCY4S9qRW2GgaUkAtKQeAk4o_pFt3Tz_f8") // Required for Auth.
-                .setDatabaseUrl("https://pubrepo-dev.firebaseio.com") // Required for RTDB.
-                .setStorageBucket("pubrepo-dev.appspot.com")
+                .setApplicationId(googleService.getApplicationId()) // Required for Analytics.
+                .setApiKey(googleService.getApiKey()) // Required for Auth.
+                .setDatabaseUrl(googleService.getDatabaseUrl()) // Required for RTDB.
+                .setStorageBucket(googleService.getStorageBucket())
                 .build();
+//        FirebaseOptions options = new FirebaseOptions.Builder()
+//                .setApplicationId("1:756940305187:android:c68a87e680fc5dcc") // Required for Analytics.
+//                .setApiKey("AIzaSyCY4S9qRW2GgaUkAtKQeAk4o_pFt3Tz_f8") // Required for Auth.
+//                .setDatabaseUrl("https://pubrepo-dev.firebaseio.com") // Required for RTDB.
+//                .setStorageBucket("pubrepo-dev.appspot.com")
+//                .build();
 
         // Initialize with secondary app.
         try {
