@@ -6,14 +6,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gallery"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/mTextViewTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@color/gallery"
             android:padding="5dp"
             android:textColor="@color/black"
             android:textSize="@dimen/common_text_size"
@@ -28,7 +27,8 @@
             android:id="@+id/mTextViewDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:textColor="@color/text_black" />
 
         <TextView
             android:id="@+id/mTextViewContent"
@@ -36,7 +36,8 @@
             android:layout_height="wrap_content"
             android:paddingBottom="20dp"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp" />
+            android:paddingRight="10dp"
+            android:textColor="@color/black" />
     </LinearLayout>
 
 </layout>
